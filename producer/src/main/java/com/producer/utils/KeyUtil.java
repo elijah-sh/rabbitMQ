@@ -22,8 +22,8 @@ public class KeyUtil {
     public static synchronized String genUniqueKeyOrderId(){
         Random random = new Random();
         Integer number = random.nextInt(9000) + 1000;
-        SimpleDateFormat sdf =   new SimpleDateFormat( "yyyy-MM-dd HH-mm" );
-        return sdf.format(new Date()) + String.valueOf(number);
+        SimpleDateFormat sdf =   new SimpleDateFormat( "yyyyMMddHHmm" );
+        return sdf.format(new Date()) +"$"+String.valueOf(number);
     }
 
     /**
